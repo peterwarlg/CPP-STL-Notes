@@ -7,9 +7,9 @@ TYPES OF ITERATORS ( SHORCUTS USED IN THIS NOTE ) :
 
 -> I = Input Iterator
 -> O = Output Iterator
--> F = Forward Iterator
--> B = Bidirectional Iterator
--> R = Random Iterator
+-> F = Forward Iterator ( Forward list, Unordered Set, Unordered Map )
+-> B = Bidirectional Iterator ( Set, Multi Set, Map, Multi Map, List )
+-> R = Random Iterator ( Vector, Dequeue )
 -> # = Optional parameter
 -> *itr = Iterator
 -> ComCls = Comparator Class
