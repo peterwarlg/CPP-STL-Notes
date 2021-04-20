@@ -1,0 +1,85 @@
+COMMAN FOR ALL CONTAINER :
+
+begin() end() cbegin() cend() crbegin() crend()
+  1       1      1       1        1       1
+
+TYPES OF ITERATORS ( SHORCUTS USED IN THIS NOTE ) :
+
+-> I = Input Iterator
+-> O = Output Iterator
+-> F = Forward Iterator
+-> B = Bidirectional Iterator
+-> R = Random Iterator
+-> # = Optional parameter
+-> *itr = Iterator
+-> ComCls = Comparator Class
+
+SIMPLE CONTAINER :
+
+-> PAIR : make_pair( , ) or { , }
+
+SEQUENCE CONTAINER :
+
+-> VECTOR : front() back() push_back() pop_back() push_front() pop_front() insert(*itr,#times,val) erase(*itr,#*itr) size() empty() clear() v1.swap(v2)
+	   1  	   1	   1		1             n              n                 m+n                   m+n          1      1        1     1
+
+-> DEQUEUE : front() back() push_back() pop_back() push_front() pop_front() insert(*itr,#times,val) erase(*itr,#*itr) size() empty() clear() v1.swap(v2)
+	       1       1	 1        1            1              1                 m+n                   m+n       1       1        1        1
+
+-> LIST : front() back() push_back() pop_back() push_front() pop_front() insert(*itr,#times,value) erase(*itr,#*itr) size() empty() clear() reverse() l1.swap(l2)
+	   1  	   1	   1		1         n              n                 m+n                   m+n          1      1        1       n           1
+       unique(val) l1.merge(l2) remove(val) sort()
+	  n            m+n         m+n       nlogn
+
+-> FORWARD_LIST : front() push_front() pop_front() inser_after(*itr,val) erase_after(*itr,val) empty() clear() reverse() f1.swap(f2)
+		     1        1             1                1                       1             1       n       n           1
+	unique(val) f1.merge(f2) remove(val) sort()
+	  n             m+n         m+n       nlogn
+
+ADAPTIVE CONTAINER : 
+
+-> STACK ( VECTOR OR DEQUEUE ( DEFAULT ) OR LIST ) : top() push() pop() size() empty()
+					               1    1    1   1    1      1
+
+-> QUEUE : front() back() push() pop() size() empty() 
+               1      1      1     1     1       1
+
+-> PRIORITY QUEUE ( HEAP DS ) : top() push() pop() size() empty()
+			          1   logn   logn      1      1
+
+ASSOCIATIVE CONTAINER : 
+
+-> SET ( BST ): insert(*itr,#times,val) erase(*itr,#*itr)  size() empty() clear() find(val) count(val) upper_bound(val) lower_bound(val) equal_range(val)
+	            logn                 1                   1      1       n	      logn       logn         logn                 logn        logn
+
+-> MULTISET ( BST ): insert(*itr,#times,val) erase(*itr,#*itr)  size() empty() clear() find(val) count(val) upper_bound(val) lower_bound(val) equal_range(val)
+	             logn                     1                    1      1       n       logn       logn         logn             logn           logn
+
+-> MAP ( RBT ): insert(*itr,#times,val) erase(*itr,#*itr)  size() empty() clear() find(val) count(val) upper_bound(val) lower_bound(val) equal_range(val)
+	            logn                  1                  1       1        n    logn       logn         logn            logn             logn
+ 
+-> MULTIMAP ( RBT ): insert(*itr,#times,val) erase(*itr,#*itr)  size() empty() clear() find(val) count(val) upper_bound(val) lower_bound(val) equal_range(val)
+	                logn                      1                 1      1       n	   logn       logn         logn              logn           logn
+  
+UNORDER ASSOCIATIVE CONTAINER:
+
+-> UNORDERED_SET ( HASHTAB ): insert(*itr,#times,val) erase(*itr,#*itr)  size() empty() clear() find(val) count(val) upper_bound(val) lower_bound(val) equal_range(val)
+	                               logn                  logn          1      1       n	logn       logn         logn               logn        logn
+
+-> UNORDERED_MAP ( HASHTAB ): insert(*itr,#times,val) erase(*itr,#*itr)  size() empty() clear() find(val) count(val) upper_bound(val) lower_bound(val) equal_range(val)
+	                               logn                  logn          1      1       n	logn       logn         logn               logn        logn
+
+ALGORITHM : ( INDEPENDANT OF CONTAINER )
+
+find(*I,*I,val) binary_search(*F,*F,val) sort(*R,*R) reverse(*B,*B) upper_bound(*R,*R,val) lower_bound(*R,*R,val)  is_permuatation(*F1,*F1,*F2) 
+    n			   logn			     n            n                  logn                  logn                    n^2
+
+next_permutation(*B,*B) prev_permutation(*B,*B) max(*F,*F,#ComCls) min(*F,*F,#ComCls) rotate(*F,*F+n,*F) merge(*11,*12,*21,*22,*3)
+        n                       n                      n                      n             n                         m+n
+
+make_heap(*R,*R,#ComCls) pop_heap(*R,*R,#ComCls) pusp_heap(*R,*R,#ComCls) sort_heap(*R,*R,#ComCls)
+          n			    logn                  logn                     logn
+
+STRING :
+
+s1.find(s2) substr(pos,len) length()
