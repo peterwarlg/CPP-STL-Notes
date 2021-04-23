@@ -20,8 +20,8 @@ SIMPLE CONTAINER :
 
 SEQUENCE CONTAINER :
 
--> VECTOR : front() back() push_back() pop_back() push_front() pop_front() insert(*itr,#times,val) erase(*itr,#*itr) size() empty() clear() v1.swap(v2)
-	   1  	   1	   1		1             n              n                 m+n                   m+n          1      1        1     1
+-> VECTOR : front() back() push_back() pop_back() insert(*itr,#times,val) erase(*itr,#*itr) size() empty() clear() v1.swap(v2)
+	   1  	   1	   1		1                   m+n                   m+n          1      1        1     1
 
 -> DEQUEUE : front() back() push_back() pop_back() push_front() pop_front() insert(*itr,#times,val) erase(*itr,#*itr) size() empty() clear() v1.swap(v2)
 	       1       1	 1        1            1              1                 m+n                   m+n       1       1        1        1
